@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://knishantkumar008-sys.github.io/toolcalchub/sitemap.xml
