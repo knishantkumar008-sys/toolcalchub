@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://knishantkumar008-sys.github.io/toolcalchub/sitemap.xml
+Sitemap: https://knishantkumar008-sys.github.io/toolcalchub/atom.xml?redirect=false&start-index=1&max-results=500
