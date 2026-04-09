@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ToolCalcHub — Free online calculators for Solar Energy, Wind Energy, Salary & Tax, and Legal Documents. Works globally for USA, UK, Canada, Germany, India, Russia. No login required.">
+<meta name="keywords" content="solar panel calculator, wind turbine calculator, salary calculator, income tax calculator 2026, take home pay calculator, EMI calculator, NDA generator, rent agreement template, free legal documents, solar ROI calculator, wind energy calculator, USA tax calculator, UK PAYE calculator, India income tax calculator, Germany tax calculator, Canada salary calculator">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="ToolCalcHub">
+<meta name="language" content="English">
+<meta name="revisit-after" content="7 days">
+<meta name="theme-color" content="#0a0e1a">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ToolCalcHub — Free Solar, Wind, Salary & Legal Calculators">
+<meta property="og:description" content="35+ free tools: Solar panel sizing, wind turbine output, salary take-home pay, income tax, EMI, NDA generator. Works for USA, UK, Canada, Germany, India, Russia.">
+<meta property="og:url" content="https://toolcalchub.com">
+<meta property="og:site_name" content="ToolCalcHub">
+<meta property="og:image" content="https://toolcalchub.com/og-image.png">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ToolCalcHub — Free Solar, Wind, Salary & Legal Calculators">
+<meta name="twitter:description" content="35+ free tools for Solar, Wind, Salary, Tax & Legal Documents. Works globally. No login required.">
+<title>ToolCalcHub — Free Solar, Wind, Salary & Legal Calculator Tools</title>
+<link rel="canonical" href="https://toolcalchub.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- SEO: Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ToolCalcHub",
+  "url": "https://toolcalchub.com",
+  "description": "Free online calculators for Solar Energy, Wind Energy, Salary & Tax, and Legal Documents. Works globally for USA, UK, Canada, Germany, India, Russia.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://toolcalchub.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ToolCalcHub",
+  "url": "https://toolcalchub.com",
+  "logo": "https://toolcalchub.com/logo.png",
+  "contactPoint": {"@type": "ContactPoint", "email": "hello@toolcalchub.com", "contactType": "customer service"}
+}
+</script>
+
+</head>
+<body>
+<nav>
+  <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">
+    ⚡ <span>ToolCalcHub</span>
+  </div>
+  <div class="nav-tabs">
+    <button class="nav-tab" onclick="window.location.href='solar.html'" id="nav-solar">
+      <span class="dot" style="background:var(--solar)"></span> Solar
+    </button>
+    <button class="nav-tab" onclick="window.location.href='wind.html'" id="nav-wind">
+      <span class="dot" style="background:var(--wind)"></span> Wind
+    </button>
+    <button class="nav-tab" onclick="window.location.href='salary.html'" id="nav-salary">
+      <span class="dot" style="background:var(--salary)"></span> Salary
+    </button>
+    <button class="nav-tab" onclick="window.location.href='legal.html'" id="nav-legal">
+      <span class="dot" style="background:var(--legal)"></span> Legal
+    </button>
+    <button class="nav-tab" onclick="window.location.href='blog.html'" id="nav-blog">
+      <span class="dot" style="background:var(--accent)"></span> Blog
+    </button>
+  </div>
+</nav>
+<div class="container main-content">
+<div id="wind-section" class="section active">
+  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+  <div class="section-header">
+    <h2>💨 Wind Energy Calculators</h2>
+    <p>8 free tools — no signup, no limits</p>
+  </div>
+  <div class="sub-tabs wind-tabs">
+    <button class="sub-tab active" onclick="showCalc('wind','w1',this)">Power Output</button>
+    <button class="sub-tab" onclick="showCalc('wind','w2',this)">Annual Production</button>
+    <button class="sub-tab" onclick="showCalc('wind','w3',this)">Swept Area</button>
+    <button class="sub-tab" onclick="showCalc('wind','w4',this)">ROI & Payback</button>
+    <button class="sub-tab" onclick="showCalc('wind','w5',this)">Betz Law</button>
+    <button class="sub-tab" onclick="showCalc('wind','w6',this)">Home Turbine</button>
+    <button class="sub-tab" onclick="showCalc('wind','w7',this)">Air Density</button>
+    <button class="sub-tab" onclick="showCalc('wind','w8',this)">Capacity Factor</button>
+  </div>
+
+  <!-- W1 -->
+  <div class="calc-panel active" id="wind-w1">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Wind Turbine Power Output</h3>
+        <div class="field"><label>Wind speed (m/s)</label><input type="number" id="w1-speed" placeholder="e.g. 8" min="0" step="0.1"></div>
+        <div class="field"><label>Blade length / radius (m)</label><input type="number" id="w1-blade" placeholder="e.g. 25" min="0" step="0.1"></div>
+        <div class="field"><label>Power coefficient (Cp)</label><input type="number" id="w1-cp" value="0.4" step="0.01" min="0.1" max="0.59"></div>
+        <div class="field"><label>Air density (kg/m³)</label><input type="number" id="w1-rho" value="1.225" step="0.001" min="0.5"></div>
+        <button class="calc-btn wind-btn" onclick="calcW1()">Calculate Power</button>
+      </div>
+      <div class="result-box" id="res-w1"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+    <div class="info-box"><strong>Formula:</strong> P = 0.5 × ρ × π × r² × v³ × Cp</div>
+  </div>
+
+  <!-- W2 -->
+  <div class="calc-panel" id="wind-w2">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Annual Wind Energy Production</h3>
+        <div class="field"><label>Turbine rated power (kW)</label><input type="number" id="w2-kw" placeholder="e.g. 100" min="0"></div>
+        <div class="field"><label>Capacity factor (%)</label><input type="number" id="w2-cf" placeholder="e.g. 35" value="35" min="1" max="100"></div>
+        <button class="calc-btn wind-btn" onclick="calcW2()">Calculate Annual Output</button>
+      </div>
+      <div class="result-box" id="res-w2"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+    <div class="info-box"><strong>Formula:</strong> Annual kWh = Rated kW × 8760 hrs × (Capacity Factor / 100)</div>
+  </div>
+
+  <!-- W3 -->
+  <div class="calc-panel" id="wind-w3">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Turbine Swept Area</h3>
+        <div class="field"><label>Blade length (radius in meters)</label><input type="number" id="w3-r" placeholder="e.g. 25" min="0" step="0.1"></div>
+        <button class="calc-btn wind-btn" onclick="calcW3()">Calculate Swept Area</button>
+      </div>
+      <div class="result-box" id="res-w3"><h3>Results</h3><div class="result-empty">Enter blade length and click Calculate</div></div>
+    </div>
+    <div class="info-box"><strong>Formula:</strong> A = π × r²</div>
+  </div>
+
+  <!-- W4 -->
+  <div class="calc-panel" id="wind-w4">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Wind Turbine ROI & Payback</h3>
+        <div class="field"><label>Installation cost ($)</label><input type="number" id="w4-cost" placeholder="e.g. 50000" min="0"></div>
+        <div class="field"><label>Annual energy produced (kWh)</label><input type="number" id="w4-kwh" placeholder="e.g. 20000" min="0"></div>
+        <div class="field"><label>Electricity rate ($/kWh)</label><input type="number" id="w4-rate" placeholder="e.g. 0.12" step="0.01" min="0"></div>
+        <div class="field"><label>Annual maintenance cost ($)</label><input type="number" id="w4-maint" placeholder="e.g. 500" value="500" min="0"></div>
+        <button class="calc-btn wind-btn" onclick="calcW4()">Calculate ROI</button>
+      </div>
+      <div class="result-box" id="res-w4"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+  </div>
+
+  <!-- W5 -->
+  <div class="calc-panel" id="wind-w5">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Betz Law — Maximum Power</h3>
+        <div class="field"><label>Wind speed (m/s)</label><input type="number" id="w5-speed" placeholder="e.g. 10" min="0" step="0.1"></div>
+        <div class="field"><label>Rotor radius (m)</label><input type="number" id="w5-r" placeholder="e.g. 30" min="0" step="0.1"></div>
+        <div class="field"><label>Air density (kg/m³)</label><input type="number" id="w5-rho" value="1.225" step="0.001" min="0.5"></div>
+        <button class="calc-btn wind-btn" onclick="calcW5()">Calculate Max Power</button>
+      </div>
+      <div class="result-box" id="res-w5"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+    <div class="info-box"><strong>Betz Limit:</strong> No turbine can extract more than 59.26% (16/27) of wind's kinetic energy.</div>
+  </div>
+
+  <!-- W6 -->
+  <div class="calc-panel" id="wind-w6">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Home Wind Turbine Sizing</h3>
+        <div class="field"><label>Daily electricity usage (kWh)</label><input type="number" id="w6-kwh" placeholder="e.g. 15" min="0"></div>
+        <div class="field"><label>Average wind speed (m/s)</label><input type="number" id="w6-speed" placeholder="e.g. 6" min="0" step="0.1"></div>
+        <div class="field"><label>Wind hours per day</label><input type="number" id="w6-hrs" value="8" min="1" max="24"></div>
+        <button class="calc-btn wind-btn" onclick="calcW6()">Calculate Turbine Size</button>
+      </div>
+      <div class="result-box" id="res-w6"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+  </div>
+
+  <!-- W7 -->
+  <div class="calc-panel" id="wind-w7">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Air Density Calculator</h3>
+        <div class="field"><label>Altitude (meters above sea level)</label><input type="number" id="w7-alt" placeholder="e.g. 500" value="0" min="0"></div>
+        <div class="field"><label>Temperature (°C)</label><input type="number" id="w7-temp" placeholder="e.g. 15" value="15"></div>
+        <button class="calc-btn wind-btn" onclick="calcW7()">Calculate Air Density</button>
+      </div>
+      <div class="result-box" id="res-w7"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+    <div class="info-box"><strong>Formula:</strong> ρ = P/(R×T) where P = pressure at altitude, R = 287.05 J/(kg·K), T = temp in Kelvin</div>
+  </div>
+
+  <!-- W8 -->
+  <div class="calc-panel" id="wind-w8">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Wind Capacity Factor</h3>
+        <div class="field"><label>Actual annual output (kWh)</label><input type="number" id="w8-actual" placeholder="e.g. 300000" min="0"></div>
+        <div class="field"><label>Rated power (kW)</label><input type="number" id="w8-rated" placeholder="e.g. 100" min="0"></div>
+        <button class="calc-btn wind-btn" onclick="calcW8()">Calculate Capacity Factor</button>
+      </div>
+      <div class="result-box" id="res-w8"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+    <div class="info-box"><strong>Formula:</strong> CF = Actual Output ÷ (Rated kW × 8760 hrs) × 100</div>
+  </div>
+</div>
+
+<!-- ══════════════ SALARY SECTION ══════════════ -->
+
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="#" onclick="window.location.href='index.html';return false;">Home</a>
+    <a href="#" onclick="window.location.href='solar.html';return false;">Solar Tools</a>
+    <a href="#" onclick="window.location.href='wind.html';return false;">Wind Tools</a>
+    <a href="#" onclick="window.location.href='salary.html';return false;">Salary Tools</a>
+    <a href="#" onclick="window.location.href='legal.html';return false;">Legal Tools</a>
+  </div>
+  <div class="footer-links" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);">
+    <a href="#" onclick="window.location.href='about.html';return false;">About Us</a>
+    <a href="#" onclick="window.location.href='privacy.html';return false;">Privacy Policy</a>
+    <a href="#" onclick="window.location.href='disclaimer.html';return false;">Disclaimer</a>
+    <a href="#" onclick="window.location.href='terms.html';return false;">Terms of Use</a>
+    <a href="#" onclick="window.location.href='contact.html';return false;">Contact</a>
+    <a href="#" onclick="window.location.href='blog.html';return false;">Blog</a>
+  </div>
+  <p style="margin-top:16px;">© 2026 ToolCalcHub.com — Free calculator tools for everyone</p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

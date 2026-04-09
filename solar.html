@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ToolCalcHub — Free online calculators for Solar Energy, Wind Energy, Salary & Tax, and Legal Documents. Works globally for USA, UK, Canada, Germany, India, Russia. No login required.">
+<meta name="keywords" content="solar panel calculator, wind turbine calculator, salary calculator, income tax calculator 2026, take home pay calculator, EMI calculator, NDA generator, rent agreement template, free legal documents, solar ROI calculator, wind energy calculator, USA tax calculator, UK PAYE calculator, India income tax calculator, Germany tax calculator, Canada salary calculator">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="ToolCalcHub">
+<meta name="language" content="English">
+<meta name="revisit-after" content="7 days">
+<meta name="theme-color" content="#0a0e1a">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ToolCalcHub — Free Solar, Wind, Salary & Legal Calculators">
+<meta property="og:description" content="35+ free tools: Solar panel sizing, wind turbine output, salary take-home pay, income tax, EMI, NDA generator. Works for USA, UK, Canada, Germany, India, Russia.">
+<meta property="og:url" content="https://toolcalchub.com">
+<meta property="og:site_name" content="ToolCalcHub">
+<meta property="og:image" content="https://toolcalchub.com/og-image.png">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ToolCalcHub — Free Solar, Wind, Salary & Legal Calculators">
+<meta name="twitter:description" content="35+ free tools for Solar, Wind, Salary, Tax & Legal Documents. Works globally. No login required.">
+<title>ToolCalcHub — Free Solar, Wind, Salary & Legal Calculator Tools</title>
+<link rel="canonical" href="https://toolcalchub.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- SEO: Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ToolCalcHub",
+  "url": "https://toolcalchub.com",
+  "description": "Free online calculators for Solar Energy, Wind Energy, Salary & Tax, and Legal Documents. Works globally for USA, UK, Canada, Germany, India, Russia.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://toolcalchub.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ToolCalcHub",
+  "url": "https://toolcalchub.com",
+  "logo": "https://toolcalchub.com/logo.png",
+  "contactPoint": {"@type": "ContactPoint", "email": "hello@toolcalchub.com", "contactType": "customer service"}
+}
+</script>
+
+</head>
+<body>
+<nav>
+  <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">
+    ⚡ <span>ToolCalcHub</span>
+  </div>
+  <div class="nav-tabs">
+    <button class="nav-tab" onclick="window.location.href='solar.html'" id="nav-solar">
+      <span class="dot" style="background:var(--solar)"></span> Solar
+    </button>
+    <button class="nav-tab" onclick="window.location.href='wind.html'" id="nav-wind">
+      <span class="dot" style="background:var(--wind)"></span> Wind
+    </button>
+    <button class="nav-tab" onclick="window.location.href='salary.html'" id="nav-salary">
+      <span class="dot" style="background:var(--salary)"></span> Salary
+    </button>
+    <button class="nav-tab" onclick="window.location.href='legal.html'" id="nav-legal">
+      <span class="dot" style="background:var(--legal)"></span> Legal
+    </button>
+    <button class="nav-tab" onclick="window.location.href='blog.html'" id="nav-blog">
+      <span class="dot" style="background:var(--accent)"></span> Blog
+    </button>
+  </div>
+</nav>
+<div class="container main-content">
+<div id="solar-section" class="section active">
+  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+  <div class="section-header">
+    <h2>☀️ Solar Energy Calculators</h2>
+    <p>9 free tools — no signup, no limits</p>
+  </div>
+  <div class="sub-tabs solar-tabs">
+    <button class="sub-tab active" onclick="showCalc('solar','s1',this)">Panel Size</button>
+    <button class="sub-tab" onclick="showCalc('solar','s2',this)">Energy Output</button>
+    <button class="sub-tab" onclick="showCalc('solar','s3',this)">ROI & Savings</button>
+    <button class="sub-tab" onclick="showCalc('solar','s4',this)">Battery Size</button>
+    <button class="sub-tab" onclick="showCalc('solar','s5',this)">Roof Area</button>
+    <button class="sub-tab" onclick="showCalc('solar','s6',this)">Peak Sun Hours</button>
+    <button class="sub-tab" onclick="showCalc('solar','s7',this)">CO₂ Savings</button>
+    <button class="sub-tab" onclick="showCalc('solar','s8',this)">Inverter Size</button>
+    <button class="sub-tab" onclick="showCalc('solar','s9',this)">Tilt Angle</button>
+  </div>
+
+  <!-- S1: Panel Size -->
+  <div class="calc-panel active" id="solar-s1">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Solar Panel System Size</h3>
+        <div class="field"><label>Monthly electricity usage (kWh)</label><input type="number" id="s1-kwh" placeholder="e.g. 500" min="0"></div>
+        <div class="field"><label>Your location / country</label>
+          <select id="s1-loc">
+            <optgroup label="🇮🇳 India">
+              <option value="India-South">India — South (6.0 PSH)</option>
+              <option value="India-Central" selected>India — Central (5.5 PSH)</option>
+              <option value="India-North">India — North (5.0 PSH)</option>
+            </optgroup>
+            <optgroup label="🇺🇸 USA">
+              <option value="USA-Southwest">USA — Southwest AZ/NV (6.5 PSH)</option>
+              <option value="USA-South">USA — South TX/FL (5.2 PSH)</option>
+              <option value="USA-Northeast">USA — Northeast NY/MA (3.8 PSH)</option>
+              <option value="USA-Northwest">USA — Northwest WA/OR (3.5 PSH)</option>
+            </optgroup>
+            <optgroup label="🇬🇧 UK">
+              <option value="UK">United Kingdom (2.8 PSH)</option>
+            </optgroup>
+            <optgroup label="🇩🇪 Germany">
+              <option value="Germany">Germany (3.2 PSH)</option>
+            </optgroup>
+            <optgroup label="🇨🇦 Canada">
+              <option value="Canada-ON">Canada — Ontario (3.8 PSH)</option>
+              <option value="Canada-BC">Canada — British Columbia (3.5 PSH)</option>
+            </optgroup>
+            <optgroup label="🇷🇺 Russia">
+              <option value="Russia">Russia avg (3.0 PSH)</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="field"><label>Panel wattage (W)</label><input type="number" id="s1-watt" placeholder="e.g. 400" value="400" min="0"></div>
+        <div class="field"><label>System efficiency (%)</label><input type="number" id="s1-eff" placeholder="e.g. 80" value="80" min="1" max="100"></div>
+        <button class="calc-btn solar-btn" onclick="calcS1()">Calculate Panel Count</button>
+      </div>
+      <div class="result-box" id="res-s1">
+        <h3>Results</h3>
+        <div class="result-empty">Enter values and click Calculate</div>
+      </div>
+    </div>
+    <div class="info-box"><strong>Formula:</strong> Panels = (Monthly kWh ÷ 30 ÷ PSH) ÷ (Panel W ÷ 1000 × Efficiency%)</div>
+  </div>
+
+  <!-- S2: Energy Output -->
+  <div class="calc-panel" id="solar-s2">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Solar Energy Output</h3>
+        <div class="field"><label>Number of panels</label><input type="number" id="s2-panels" placeholder="e.g. 10" min="0"></div>
+        <div class="field"><label>Panel wattage (W)</label><input type="number" id="s2-watt" placeholder="e.g. 400" value="400" min="0"></div>
+        <div class="field"><label>Location (Peak Sun Hours)</label>
+          <select id="s2-psh">
+            <option value="5.5">India (5.5 PSH)</option>
+            <option value="4.5">USA South (4.5 PSH)</option>
+            <option value="3.5">USA North (3.5 PSH)</option>
+            <option value="3.0">UK (3.0 PSH)</option>
+            <option value="3.2">Germany (3.2 PSH)</option>
+            <option value="4.0">Canada (4.0 PSH)</option>
+            <option value="3.8">Russia (3.8 PSH)</option>
+          </select>
+        </div>
+        <div class="field"><label>System efficiency (%)</label><input type="number" id="s2-eff" value="80" min="1" max="100"></div>
+        <button class="calc-btn solar-btn" onclick="calcS2()">Calculate Output</button>
+      </div>
+      <div class="result-box" id="res-s2"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+  </div>
+
+  <!-- S3: ROI -->
+  <div class="calc-panel" id="solar-s3">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Solar ROI & Savings</h3>
+        <div class="field"><label>System installation cost ($)</label><input type="number" id="s3-cost" placeholder="e.g. 8000" min="0"></div>
+        <div class="field"><label>Annual energy production (kWh)</label><input type="number" id="s3-kwh" placeholder="e.g. 5000" min="0"></div>
+        <div class="field"><label>Electricity rate ($/kWh)</label><input type="number" id="s3-rate" placeholder="e.g. 0.13" step="0.01" min="0"></div>
+        <div class="field"><label>Annual maintenance cost ($)</label><input type="number" id="s3-maint" placeholder="e.g. 100" value="100" min="0"></div>
+        <button class="calc-btn solar-btn" onclick="calcS3()">Calculate ROI</button>
+      </div>
+      <div class="result-box" id="res-s3"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+  </div>
+
+  <!-- S4: Battery -->
+  <div class="calc-panel" id="solar-s4">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Battery Storage Size</h3>
+        <div class="field"><label>Daily energy usage (kWh)</label><input type="number" id="s4-kwh" placeholder="e.g. 10" min="0"></div>
+        <div class="field"><label>Backup days needed</label><input type="number" id="s4-days" placeholder="e.g. 2" value="2" min="1"></div>
+        <div class="field"><label>Battery voltage (V)</label>
+          <select id="s4-volt">
+            <option value="12">12V</option>
+            <option value="24" selected>24V</option>
+            <option value="48">48V</option>
+          </select>
+        </div>
+        <div class="field"><label>Depth of Discharge (%)</label><input type="number" id="s4-dod" value="80" min="10" max="100"></div>
+        <button class="calc-btn solar-btn" onclick="calcS4()">Calculate Battery Size</button>
+      </div>
+      <div class="result-box" id="res-s4"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+  </div>
+
+  <!-- S5: Roof Area -->
+  <div class="calc-panel" id="solar-s5">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Solar Roof Area Calculator</h3>
+        <div class="field"><label>Roof length (meters)</label><input type="number" id="s5-len" placeholder="e.g. 10" min="0"></div>
+        <div class="field"><label>Roof width (meters)</label><input type="number" id="s5-wid" placeholder="e.g. 6" min="0"></div>
+        <div class="field"><label>Usable area (%)</label><input type="number" id="s5-use" value="75" min="10" max="100"></div>
+        <div class="field"><label>Panel size</label>
+          <select id="s5-panel">
+            <option value="1.7">Standard (1.7 m²)</option>
+            <option value="2.0">Large (2.0 m²)</option>
+            <option value="1.4">Small (1.4 m²)</option>
+          </select>
+        </div>
+        <button class="calc-btn solar-btn" onclick="calcS5()">Calculate Panels</button>
+      </div>
+      <div class="result-box" id="res-s5"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+  </div>
+
+  <!-- S6: Peak Sun Hours -->
+  <div class="calc-panel" id="solar-s6">
+    <div class="calc-box" style="max-width:600px">
+      <h3>Peak Sun Hours by Country / City</h3>
+      <div class="field"><label>Select your region</label>
+        <select id="s6-region" onchange="showPSH()">
+          <optgroup label="Asia">
+            <option value="India-North|5.0">India — North</option>
+            <option value="India-Central|5.5">India — Central</option>
+            <option value="India-South|6.0">India — South</option>
+          </optgroup>
+          <optgroup label="North America">
+            <option value="USA-California|5.5">USA — California</option>
+            <option value="USA-Texas|5.2">USA — Texas</option>
+            <option value="USA-New York|3.8">USA — New York</option>
+            <option value="Canada-Ontario|3.8">Canada — Ontario</option>
+            <option value="Canada-BC|3.5">Canada — British Columbia</option>
+          </optgroup>
+          <optgroup label="Europe">
+            <option value="UK|2.8">United Kingdom</option>
+            <option value="Germany|3.2">Germany</option>
+            <option value="Spain|5.0">Spain</option>
+            <option value="France|3.8">France</option>
+          </optgroup>
+          <optgroup label="Other">
+            <option value="Russia|3.0">Russia (avg)</option>
+            <option value="Australia|5.5">Australia</option>
+          </optgroup>
+        </select>
+      </div>
+      <div id="psh-result" class="result-box" style="margin-top:14px;min-height:auto">
+        <h3>Results</h3><div class="result-empty">Select a region above</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S7: CO2 -->
+  <div class="calc-panel" id="solar-s7">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>CO₂ Savings Calculator</h3>
+        <div class="field"><label>Annual solar energy produced (kWh)</label><input type="number" id="s7-kwh" placeholder="e.g. 5000" min="0"></div>
+        <div class="field"><label>Country / Grid emission factor</label>
+          <select id="s7-country">
+            <optgroup label="Asia">
+              <option value="0.82|India">🇮🇳 India (0.82 kg CO₂/kWh)</option>
+              <option value="0.58|China">🇨🇳 China (0.58 kg CO₂/kWh)</option>
+              <option value="0.54|Japan">🇯🇵 Japan (0.54 kg CO₂/kWh)</option>
+            </optgroup>
+            <optgroup label="Americas">
+              <option value="0.386|USA">🇺🇸 USA (0.386 kg CO₂/kWh)</option>
+              <option value="0.39|Canada">🇨🇦 Canada (0.39 kg CO₂/kWh)</option>
+              <option value="0.45|Brazil">🇧🇷 Brazil (0.45 kg CO₂/kWh)</option>
+            </optgroup>
+            <optgroup label="Europe">
+              <option value="0.233|UK">🇬🇧 UK (0.233 kg CO₂/kWh)</option>
+              <option value="0.34|Germany">🇩🇪 Germany (0.34 kg CO₂/kWh)</option>
+              <option value="0.21|France">🇫🇷 France (0.21 kg CO₂/kWh)</option>
+              <option value="0.18|Norway">🇳🇴 Norway (0.18 kg CO₂/kWh)</option>
+              <option value="0.47|Russia">🇷🇺 Russia (0.47 kg CO₂/kWh)</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option value="0.79|Australia">🇦🇺 Australia (0.79 kg CO₂/kWh)</option>
+              <option value="0.50|South Africa">🇿🇦 South Africa (0.50 kg CO₂/kWh)</option>
+            </optgroup>
+          </select>
+        </div>
+        <button class="calc-btn solar-btn" onclick="calcS7()">Calculate CO₂ Savings</button>
+      </div>
+      <div class="result-box" id="res-s7"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+  </div>
+
+  <!-- S8: Inverter -->
+  <div class="calc-panel" id="solar-s8">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Solar Inverter Size</h3>
+        <div class="field"><label>Total panel wattage (W)</label><input type="number" id="s8-watt" placeholder="e.g. 4000" min="0"></div>
+        <div class="field"><label>Safety factor</label>
+          <select id="s8-sf">
+            <option value="1.25">1.25x (recommended)</option>
+            <option value="1.2">1.2x (minimum)</option>
+            <option value="1.3">1.3x (conservative)</option>
+          </select>
+        </div>
+        <button class="calc-btn solar-btn" onclick="calcS8()">Calculate Inverter Size</button>
+      </div>
+      <div class="result-box" id="res-s8"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+  </div>
+
+  <!-- S9: Tilt -->
+  <div class="calc-panel" id="solar-s9">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Solar Panel Tilt Angle Optimizer</h3>
+        <div class="field"><label>Your latitude (degrees)</label><input type="number" id="s9-lat" placeholder="e.g. 23 for India, 51 for UK" min="-90" max="90"></div>
+        <div class="field"><label>Hemisphere</label>
+          <select id="s9-hemi">
+            <option value="N">Northern Hemisphere</option>
+            <option value="S">Southern Hemisphere</option>
+          </select>
+        </div>
+        <button class="calc-btn solar-btn" onclick="calcS9()">Get Optimal Angle</button>
+      </div>
+      <div class="result-box" id="res-s9"><h3>Results</h3><div class="result-empty">Enter latitude and click Calculate</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ WIND SECTION ══════════════ -->
+
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="#" onclick="window.location.href='index.html';return false;">Home</a>
+    <a href="#" onclick="window.location.href='solar.html';return false;">Solar Tools</a>
+    <a href="#" onclick="window.location.href='wind.html';return false;">Wind Tools</a>
+    <a href="#" onclick="window.location.href='salary.html';return false;">Salary Tools</a>
+    <a href="#" onclick="window.location.href='legal.html';return false;">Legal Tools</a>
+  </div>
+  <div class="footer-links" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);">
+    <a href="#" onclick="window.location.href='about.html';return false;">About Us</a>
+    <a href="#" onclick="window.location.href='privacy.html';return false;">Privacy Policy</a>
+    <a href="#" onclick="window.location.href='disclaimer.html';return false;">Disclaimer</a>
+    <a href="#" onclick="window.location.href='terms.html';return false;">Terms of Use</a>
+    <a href="#" onclick="window.location.href='contact.html';return false;">Contact</a>
+    <a href="#" onclick="window.location.href='blog.html';return false;">Blog</a>
+  </div>
+  <p style="margin-top:16px;">© 2026 ToolCalcHub.com — Free calculator tools for everyone</p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

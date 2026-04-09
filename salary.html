@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ToolCalcHub — Free online calculators for Solar Energy, Wind Energy, Salary & Tax, and Legal Documents. Works globally for USA, UK, Canada, Germany, India, Russia. No login required.">
+<meta name="keywords" content="solar panel calculator, wind turbine calculator, salary calculator, income tax calculator 2026, take home pay calculator, EMI calculator, NDA generator, rent agreement template, free legal documents, solar ROI calculator, wind energy calculator, USA tax calculator, UK PAYE calculator, India income tax calculator, Germany tax calculator, Canada salary calculator">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="ToolCalcHub">
+<meta name="language" content="English">
+<meta name="revisit-after" content="7 days">
+<meta name="theme-color" content="#0a0e1a">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ToolCalcHub — Free Solar, Wind, Salary & Legal Calculators">
+<meta property="og:description" content="35+ free tools: Solar panel sizing, wind turbine output, salary take-home pay, income tax, EMI, NDA generator. Works for USA, UK, Canada, Germany, India, Russia.">
+<meta property="og:url" content="https://toolcalchub.com">
+<meta property="og:site_name" content="ToolCalcHub">
+<meta property="og:image" content="https://toolcalchub.com/og-image.png">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ToolCalcHub — Free Solar, Wind, Salary & Legal Calculators">
+<meta name="twitter:description" content="35+ free tools for Solar, Wind, Salary, Tax & Legal Documents. Works globally. No login required.">
+<title>ToolCalcHub — Free Solar, Wind, Salary & Legal Calculator Tools</title>
+<link rel="canonical" href="https://toolcalchub.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- SEO: Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ToolCalcHub",
+  "url": "https://toolcalchub.com",
+  "description": "Free online calculators for Solar Energy, Wind Energy, Salary & Tax, and Legal Documents. Works globally for USA, UK, Canada, Germany, India, Russia.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://toolcalchub.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ToolCalcHub",
+  "url": "https://toolcalchub.com",
+  "logo": "https://toolcalchub.com/logo.png",
+  "contactPoint": {"@type": "ContactPoint", "email": "hello@toolcalchub.com", "contactType": "customer service"}
+}
+</script>
+
+</head>
+<body>
+<nav>
+  <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">
+    ⚡ <span>ToolCalcHub</span>
+  </div>
+  <div class="nav-tabs">
+    <button class="nav-tab" onclick="window.location.href='solar.html'" id="nav-solar">
+      <span class="dot" style="background:var(--solar)"></span> Solar
+    </button>
+    <button class="nav-tab" onclick="window.location.href='wind.html'" id="nav-wind">
+      <span class="dot" style="background:var(--wind)"></span> Wind
+    </button>
+    <button class="nav-tab" onclick="window.location.href='salary.html'" id="nav-salary">
+      <span class="dot" style="background:var(--salary)"></span> Salary
+    </button>
+    <button class="nav-tab" onclick="window.location.href='legal.html'" id="nav-legal">
+      <span class="dot" style="background:var(--legal)"></span> Legal
+    </button>
+    <button class="nav-tab" onclick="window.location.href='blog.html'" id="nav-blog">
+      <span class="dot" style="background:var(--accent)"></span> Blog
+    </button>
+  </div>
+</nav>
+<div class="container main-content">
+<div id="salary-section" class="section active">
+  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+  <div class="section-header">
+    <h2>💰 Salary & Tax Calculators</h2>
+    <p>6 free tools for USA, UK, Canada, Germany, India, Russia</p>
+  </div>
+  <div class="sub-tabs salary-tabs">
+    <button class="sub-tab active" onclick="showCalc('salary','t1',this)">Take-Home Pay</button>
+    <button class="sub-tab" onclick="showCalc('salary','t2',this)">Income Tax</button>
+    <button class="sub-tab" onclick="showCalc('salary','t3',this)">Salary Comparison</button>
+    <button class="sub-tab" onclick="showCalc('salary','t4',this)">Hourly to Annual</button>
+    <button class="sub-tab" onclick="showCalc('salary','t5',this)">Cost of Living</button>
+    <button class="sub-tab" onclick="showCalc('salary','t6',this)">EMI Calculator</button>
+  </div>
+
+  <!-- T1: Take Home -->
+  <div class="calc-panel active" id="salary-t1">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Take-Home Pay Calculator</h3>
+        <div class="field"><label>Country</label>
+          <select id="t1-country" onchange="updateSalaryFields()">
+            <option value="USA">🇺🇸 USA</option>
+            <option value="UK">🇬🇧 United Kingdom</option>
+            <option value="Canada">🇨🇦 Canada</option>
+            <option value="Germany">🇩🇪 Germany</option>
+            <option value="India">🇮🇳 India</option>
+            <option value="Russia">🇷🇺 Russia</option>
+          </select>
+        </div>
+        <div class="field"><label>Annual gross salary (local currency)</label><input type="number" id="t1-salary" placeholder="e.g. 60000" min="0"></div>
+        <div class="field"><label id="t1-extra-label">Filing status (USA)</label>
+          <select id="t1-extra">
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+          </select>
+        </div>
+        <button class="calc-btn salary-btn" onclick="calcT1()">Calculate Take-Home Pay</button>
+      </div>
+      <div class="result-box" id="res-t1"><h3>Results</h3><div class="result-empty">Enter salary and click Calculate</div></div>
+    </div>
+  </div>
+
+  <!-- T2: Income Tax -->
+  <div class="calc-panel" id="salary-t2">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Income Tax Calculator</h3>
+        <div class="field"><label>Country</label>
+          <select id="t2-country">
+            <option value="USA">🇺🇸 USA (Federal)</option>
+            <option value="UK">🇬🇧 UK</option>
+            <option value="Canada">🇨🇦 Canada</option>
+            <option value="Germany">🇩🇪 Germany</option>
+            <option value="India">🇮🇳 India (New Regime)</option>
+            <option value="Russia">🇷🇺 Russia</option>
+          </select>
+        </div>
+        <div class="field"><label>Annual income (local currency)</label><input type="number" id="t2-income" placeholder="e.g. 75000" min="0"></div>
+        <button class="calc-btn salary-btn" onclick="calcT2()">Calculate Tax</button>
+      </div>
+      <div class="result-box" id="res-t2"><h3>Results</h3><div class="result-empty">Enter income and click Calculate</div></div>
+    </div>
+  </div>
+
+  <!-- T3: Salary Comparison -->
+  <div class="calc-panel" id="salary-t3">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Salary Comparison — Country vs Country</h3>
+        <div class="field"><label>Your salary (USD equivalent)</label><input type="number" id="t3-salary" placeholder="e.g. 50000" min="0"></div>
+        <div class="field"><label>Country A</label>
+          <select id="t3-c1">
+            <option value="USA|1|$">🇺🇸 USA</option>
+            <option value="UK|0.79|£">🇬🇧 UK</option>
+            <option value="Canada|1.36|CA$">🇨🇦 Canada</option>
+            <option value="Germany|0.92|€">🇩🇪 Germany</option>
+            <option value="India|83|₹">🇮🇳 India</option>
+            <option value="Russia|90|₽">🇷🇺 Russia</option>
+          </select>
+        </div>
+        <div class="field"><label>Country B</label>
+          <select id="t3-c2">
+            <option value="UK|0.79|£">🇬🇧 UK</option>
+            <option value="USA|1|$">🇺🇸 USA</option>
+            <option value="Canada|1.36|CA$">🇨🇦 Canada</option>
+            <option value="Germany|0.92|€">🇩🇪 Germany</option>
+            <option value="India|83|₹">🇮🇳 India</option>
+            <option value="Russia|90|₽">🇷🇺 Russia</option>
+          </select>
+        </div>
+        <button class="calc-btn salary-btn" onclick="calcT3()">Compare Salaries</button>
+      </div>
+      <div class="result-box" id="res-t3"><h3>Results</h3><div class="result-empty">Enter values and click Compare</div></div>
+    </div>
+  </div>
+
+  <!-- T4: Hourly -->
+  <div class="calc-panel" id="salary-t4">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Hourly to Annual Salary</h3>
+        <div class="field"><label>Hourly rate</label><input type="number" id="t4-hourly" placeholder="e.g. 25" min="0" step="0.01"></div>
+        <div class="field"><label>Hours per week</label><input type="number" id="t4-hrs" value="40" min="1" max="168"></div>
+        <div class="field"><label>Weeks per year</label><input type="number" id="t4-weeks" value="52" min="1" max="52"></div>
+        <button class="calc-btn salary-btn" onclick="calcT4()">Calculate Annual Salary</button>
+      </div>
+      <div class="result-box" id="res-t4"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+  </div>
+
+  <!-- T5: Cost of Living -->
+  <div class="calc-panel" id="salary-t5">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Cost of Living Index</h3>
+        <div class="field"><label>Your current salary (USD)</label><input type="number" id="t5-salary" placeholder="e.g. 50000" min="0"></div>
+        <div class="field"><label>From city/country</label>
+          <select id="t5-from">
+            <option value="100">New York, USA (100)</option>
+            <option value="85">Los Angeles, USA (85)</option>
+            <option value="90">London, UK (90)</option>
+            <option value="78">Berlin, Germany (78)</option>
+            <option value="28">Mumbai, India (28)</option>
+            <option value="25">Delhi, India (25)</option>
+            <option value="70">Toronto, Canada (70)</option>
+            <option value="40">Moscow, Russia (40)</option>
+          </select>
+        </div>
+        <div class="field"><label>To city/country</label>
+          <select id="t5-to">
+            <option value="78">Berlin, Germany (78)</option>
+            <option value="100">New York, USA (100)</option>
+            <option value="90">London, UK (90)</option>
+            <option value="28">Mumbai, India (28)</option>
+            <option value="70">Toronto, Canada (70)</option>
+            <option value="40">Moscow, Russia (40)</option>
+          </select>
+        </div>
+        <button class="calc-btn salary-btn" onclick="calcT5()">Calculate Equivalent Salary</button>
+      </div>
+      <div class="result-box" id="res-t5"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+  </div>
+
+  <!-- T6: EMI -->
+  <div class="calc-panel" id="salary-t6">
+    <div class="calc-grid">
+      <div class="calc-box">
+        <h3>Loan EMI Calculator</h3>
+        <div class="field"><label>Loan amount</label><input type="number" id="t6-loan" placeholder="e.g. 100000" min="0"></div>
+        <div class="field"><label>Annual interest rate (%)</label><input type="number" id="t6-rate" placeholder="e.g. 8.5" step="0.1" min="0"></div>
+        <div class="field"><label>Loan tenure (months)</label><input type="number" id="t6-months" placeholder="e.g. 60" min="1"></div>
+        <button class="calc-btn salary-btn" onclick="calcT6()">Calculate EMI</button>
+      </div>
+      <div class="result-box" id="res-t6"><h3>Results</h3><div class="result-empty">Enter values and click Calculate</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ LEGAL SECTION ══════════════ -->
+
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="#" onclick="window.location.href='index.html';return false;">Home</a>
+    <a href="#" onclick="window.location.href='solar.html';return false;">Solar Tools</a>
+    <a href="#" onclick="window.location.href='wind.html';return false;">Wind Tools</a>
+    <a href="#" onclick="window.location.href='salary.html';return false;">Salary Tools</a>
+    <a href="#" onclick="window.location.href='legal.html';return false;">Legal Tools</a>
+  </div>
+  <div class="footer-links" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);">
+    <a href="#" onclick="window.location.href='about.html';return false;">About Us</a>
+    <a href="#" onclick="window.location.href='privacy.html';return false;">Privacy Policy</a>
+    <a href="#" onclick="window.location.href='disclaimer.html';return false;">Disclaimer</a>
+    <a href="#" onclick="window.location.href='terms.html';return false;">Terms of Use</a>
+    <a href="#" onclick="window.location.href='contact.html';return false;">Contact</a>
+    <a href="#" onclick="window.location.href='blog.html';return false;">Blog</a>
+  </div>
+  <p style="margin-top:16px;">© 2026 ToolCalcHub.com — Free calculator tools for everyone</p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
