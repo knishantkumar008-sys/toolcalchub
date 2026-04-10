@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ToolCalcHub Blog — Guides on Solar Energy, Wind Energy, Salary & Tax, and Legal Documents.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="ToolCalcHub">
+<meta name="theme-color" content="#0a0e1a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog — ToolCalcHub">
+<meta property="og:description" content="Latest articles and guides on Solar, Wind, Salary & Tax, and Legal Documents.">
+<meta property="og:url" content="https://toolcalchub.com/blog.html">
+<meta property="og:site_name" content="ToolCalcHub">
+<title>Blog — ToolCalcHub</title>
+<link rel="canonical" href="https://toolcalchub.com/blog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* Pagination Styles */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 40px 0 20px;
+    flex-wrap: wrap;
+  }
+
+  .page-btn {
+    min-width: 40px;
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border, #2a2d3a);
+    background: transparent;
+    color: var(--text, #e0e0e0);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .page-btn:hover {
+    background: var(--accent, #6c63ff);
+    border-color: var(--accent, #6c63ff);
+    color: #fff;
+  }
+
+  .page-btn.active {
+    background: var(--accent, #6c63ff);
+    border-color: var(--accent, #6c63ff);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .page-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  .page-btn:disabled:hover {
+    background: transparent;
+    border-color: var(--border, #2a2d3a);
+    color: var(--text, #e0e0e0);
+  }
+
+  .page-info {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted, #888);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .blog-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .blog-card.hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">
+    ⚡ <span>ToolCalcHub</span>
+  </div>
+  <div class="nav-tabs">
+    <button class="nav-tab" onclick="window.location.href='solar.html'" id="nav-solar">
+      <span class="dot" style="background:var(--solar)"></span> Solar
+    </button>
+    <button class="nav-tab" onclick="window.location.href='wind.html'" id="nav-wind">
+      <span class="dot" style="background:var(--wind)"></span> Wind
+    </button>
+    <button class="nav-tab" onclick="window.location.href='salary.html'" id="nav-salary">
+      <span class="dot" style="background:var(--salary)"></span> Salary
+    </button>
+    <button class="nav-tab" onclick="window.location.href='legal.html'" id="nav-legal">
+      <span class="dot" style="background:var(--legal)"></span> Legal
+    </button>
+    <button class="nav-tab active" onclick="window.location.href='blog.html'" id="nav-blog">
+      <span class="dot" style="background:var(--accent)"></span> Blog
+    </button>
+  </div>
+</nav>
+
+<div class="container main-content">
+  <div class="section active" id="blog-section">
+    <div class="section-header">
+      <h2>Blog</h2>
+      <p>Latest articles and guides</p>
+    </div>
+
+    <div class="blog-grid" id="blogGrid">
+
+      <!-- 1 -->
+      <div class="blog-card" data-page="1" onclick="window.location.href='blog/solar-panel-size.html'">
+        <div class="blog-thumb blog-thumb-solar">☀️</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-solar">Solar Energy</div>
+          <h3>How to Calculate How Many Solar Panels You Need for Your Home (2026 Guide)</h3>
+          <p>Step-by-step guide to sizing your solar panel system using your electricity bill, location, and roof space.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 8 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="blog-card" data-page="1" onclick="window.location.href='blog/solar-roi.html'">
+        <div class="blog-thumb blog-thumb-solar">💰</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-solar">Solar Energy</div>
+          <h3>Solar Panel ROI: How Long Does It Take to Pay Back Your Investment?</h3>
+          <p>Real numbers on solar payback periods for USA, UK, Germany, India and Canada — what affects your ROI.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 7 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="blog-card" data-page="1" onclick="window.location.href='blog/solar-battery-guide.html'">
+        <div class="blog-thumb blog-thumb-solar">🔋</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-solar">Solar Energy</div>
+          <h3>Solar Battery Storage Guide 2026: How to Choose the Right Battery for Your Solar System</h3>
+          <p>Everything you need to know about solar batteries — capacity, types, costs, and how to size a battery bank for your home.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 8 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="blog-card" data-page="1" onclick="window.location.href='blog/solar-co2-savings.html'">
+        <div class="blog-thumb blog-thumb-solar">🌿</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-solar">Solar Energy</div>
+          <h3>Solar CO₂ Savings Calculator: How Much Carbon Does Your Solar System Save?</h3>
+          <p>Calculate your solar panel system's carbon footprint reduction and environmental impact in real numbers.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 6 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="blog-card" data-page="1" onclick="window.location.href='blog/solar-india-guide.html'">
+        <div class="blog-thumb blog-thumb-solar">🇮🇳</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-solar">Solar Energy</div>
+          <h3>Solar Panels in India 2026: Cost, Subsidies, and Complete Installation Guide</h3>
+          <p>Complete guide for Indian homeowners — PM Surya Ghar scheme, state subsidies, rooftop solar costs, and top installers.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 9 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="blog-card" data-page="1" onclick="window.location.href='blog/peak-sun-hours-country.html'">
+        <div class="blog-thumb blog-thumb-solar">🌍</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-solar">Solar Energy</div>
+          <h3>Peak Sun Hours by Country: Complete Guide for Solar Panel Sizing (2026)</h3>
+          <p>Find the average peak sun hours for your country or city and learn how it affects solar panel output and system size.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 7 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="blog-card" data-page="2" onclick="window.location.href='blog/wind-power-explained.html'">
+        <div class="blog-thumb blog-thumb-wind">💨</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-wind">Wind Energy</div>
+          <h3>Wind Turbine Power Output Explained: Betz Law, Swept Area & Real-World Results</h3>
+          <p>Understand the physics behind wind energy — why turbines can never exceed 59.26% efficiency and what Cp means.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 9 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="blog-card" data-page="2" onclick="window.location.href='blog/home-wind-turbine.html'">
+        <div class="blog-thumb blog-thumb-wind">🏠</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-wind">Wind Energy</div>
+          <h3>Home Wind Turbine Guide 2026: Size, Cost, and Is It Worth It?</h3>
+          <p>Everything you need to know about residential wind turbines — sizing, costs, and real ROI for homeowners.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 8 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="blog-card" data-page="2" onclick="window.location.href='blog/salary-tax-guide.html'">
+        <div class="blog-thumb blog-thumb-salary">💼</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-salary">Salary & Tax</div>
+          <h3>Take-Home Pay Calculator: How Much Tax Do You Actually Pay in USA, UK, India, Canada & Germany?</h3>
+          <p>Country-by-country breakdown of income tax, social security, and what you really keep from your salary in 2026.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 10 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="blog-card" data-page="2" onclick="window.location.href='blog/emi-loan-guide.html'">
+        <div class="blog-thumb blog-thumb-salary">📊</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-salary">Salary & Tax</div>
+          <h3>EMI Calculator Guide: How to Calculate Loan EMI and Reduce Your Interest Payment</h3>
+          <p>Understand the EMI formula, what affects your monthly payment, and smart strategies to reduce total interest paid.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 7 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="blog-card" data-page="2" onclick="window.location.href='blog/salary-comparison-guide.html'">
+        <div class="blog-thumb blog-thumb-salary">📈</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-salary">Salary & Tax</div>
+          <h3>Salary Comparison Guide 2026: How Does Your Pay Stack Up Globally?</h3>
+          <p>Compare salaries across countries, industries, and experience levels — understand purchasing power and cost of living differences.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 8 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="blog-card" data-page="2" onclick="window.location.href='blog/india-tax-guide.html'">
+        <div class="blog-thumb blog-thumb-salary">🇮🇳</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-salary">Salary & Tax</div>
+          <h3>India Income Tax Guide 2026: New vs Old Regime, Slabs, and How to Save Tax</h3>
+          <p>Complete guide to India's income tax — new vs old regime comparison, deductions under 80C, HRA, and tax-saving strategies.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 10 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="blog-card" data-page="3" onclick="window.location.href='blog/canada-tax-guide.html'">
+        <div class="blog-thumb blog-thumb-salary">🍁</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-salary">Salary & Tax</div>
+          <h3>Canada Income Tax Guide 2026: Federal & Provincial Tax, Deductions & Take-Home Pay</h3>
+          <p>How Canadian income tax works — federal and provincial rates, CPP, EI contributions, RRSP deductions, and your actual take-home pay.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 9 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="blog-card" data-page="3" onclick="window.location.href='blog/germany-tax-guide.html'">
+        <div class="blog-thumb blog-thumb-salary">🇩🇪</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-salary">Salary & Tax</div>
+          <h3>Germany Income Tax Guide 2026: Tax Classes, Rates, and How to Calculate Your Net Salary</h3>
+          <p>Complete breakdown of German income tax — Steuerklassen, solidarity surcharge, social contributions, and your real net salary.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 9 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="blog-card" data-page="3" onclick="window.location.href='blog/nda-guide.html'">
+        <div class="blog-thumb blog-thumb-legal">📄</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-legal">Legal Documents</div>
+          <h3>What is an NDA? Non-Disclosure Agreement Guide + Free Generator</h3>
+          <p>Everything about NDAs — what they protect, key clauses to include, and how to generate one free without a lawyer.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 8 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="blog-card" data-page="3" onclick="window.location.href='blog/freelance-contract-guide.html'">
+        <div class="blog-thumb blog-thumb-legal">✍️</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-legal">Legal Documents</div>
+          <h3>Freelance Contract Guide 2026: What to Include and How to Protect Yourself</h3>
+          <p>Everything a freelancer needs in a contract — scope, payment terms, IP ownership, kill fees, and how to generate one free.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 8 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 17 -->
+      <div class="blog-card" data-page="3" onclick="window.location.href='blog/rent-agreement-guide.html'">
+        <div class="blog-thumb blog-thumb-legal">🏠</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-legal">Legal Documents</div>
+          <h3>Rent Agreement Guide 2026: What Every Tenant and Landlord Must Know</h3>
+          <p>Key clauses to include in a rent agreement, tenant rights, landlord obligations, and how to generate a free rental agreement.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 7 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 18 -->
+      <div class="blog-card" data-page="3" onclick="window.location.href='blog/privacy-policy-guide.html'">
+        <div class="blog-thumb blog-thumb-legal">🔒</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-legal">Legal Documents</div>
+          <h3>Privacy Policy Guide 2026: What Your Website Needs and How to Write One Free</h3>
+          <p>What a privacy policy must include for GDPR, CCPA, and global compliance — and how to generate one free for your website or app.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 7 min read</span></div>
+        </div>
+      </div>
+
+      <!-- 19 -->
+      <div class="blog-card" data-page="4" onclick="window.location.href='blog/solar-wind-compare.html'">
+        <div class="blog-thumb blog-thumb-hybrid">⚡</div>
+        <div class="blog-card-body">
+          <div class="blog-cat blog-cat-hybrid">Solar vs Wind</div>
+          <h3>Solar Energy vs Wind Energy: Which is Better for Your Home in 2026?</h3>
+          <p>Side-by-side comparison of solar panels vs wind turbines — cost, output, maintenance, and which wins for your location.</p>
+          <div class="blog-meta"><span>📅 March 2026</span><span class="blog-read-time">⏱ 9 min read</span></div>
+        </div>
+      </div>
+
+    </div><!-- end blog-grid -->
+
+    <!-- Page Info -->
+    <div class="page-info" id="pageInfo"></div>
+
+    <!-- Pagination -->
+    <div class="pagination" id="pagination"></div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="#" onclick="window.location.href='index.html';return false;">Home</a>
+    <a href="#" onclick="window.location.href='solar.html';return false;">Solar Tools</a>
+    <a href="#" onclick="window.location.href='wind.html';return false;">Wind Tools</a>
+    <a href="#" onclick="window.location.href='salary.html';return false;">Salary Tools</a>
+    <a href="#" onclick="window.location.href='legal.html';return false;">Legal Tools</a>
+  </div>
+  <div class="footer-links" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);">
+    <a href="#" onclick="window.location.href='about.html';return false;">About Us</a>
+    <a href="#" onclick="window.location.href='privacy.html';return false;">Privacy Policy</a>
+    <a href="#" onclick="window.location.href='disclaimer.html';return false;">Disclaimer</a>
+    <a href="#" onclick="window.location.href='terms.html';return false;">Terms of Use</a>
+    <a href="#" onclick="window.location.href='contact.html';return false;">Contact</a>
+    <a href="#" onclick="window.location.href='blog.html';return false;">Blog</a>
+  </div>
+  <p style="margin-top:16px;">© 2026 ToolCalcHub.com — Free calculator tools for everyone</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // ── Pagination Logic ──────────────────────────────────────────────
+  const CARDS_PER_PAGE = 6;
+  let currentPage = 1;
+
+  const allCards = Array.from(document.querySelectorAll('#blogGrid .blog-card'));
+  const totalPages = Math.ceil(allCards.length / CARDS_PER_PAGE);
+
+  function showPage(page) {
+    currentPage = page;
+
+    allCards.forEach((card, index) => {
+      const cardPage = Math.floor(index / CARDS_PER_PAGE) + 1;
+      card.classList.toggle('hidden', cardPage !== page);
+    });
+
+    renderPagination();
+    updatePageInfo();
+
+    // Scroll to top of blog grid smoothly
+    document.getElementById('blog-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function renderPagination() {
+    const container = document.getElementById('pagination');
+    container.innerHTML = '';
+
+    // Prev button
+    const prev = document.createElement('button');
+    prev.className = 'page-btn';
+    prev.textContent = '← Prev';
+    prev.disabled = currentPage === 1;
+    prev.onclick = () => showPage(currentPage - 1);
+    container.appendChild(prev);
+
+    // Page number buttons
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement('button');
+      btn.className = 'page-btn' + (i === currentPage ? ' active' : '');
+      btn.textContent = i;
+      btn.onclick = () => showPage(i);
+      container.appendChild(btn);
+    }
+
+    // Next button
+    const next = document.createElement('button');
+    next.className = 'page-btn';
+    next.textContent = 'Next →';
+    next.disabled = currentPage === totalPages;
+    next.onclick = () => showPage(currentPage + 1);
+    container.appendChild(next);
+  }
+
+  function updatePageInfo() {
+    const start = (currentPage - 1) * CARDS_PER_PAGE + 1;
+    const end = Math.min(currentPage * CARDS_PER_PAGE, allCards.length);
+    document.getElementById('pageInfo').textContent =
+      `Showing ${start}–${end} of ${allCards.length} articles`;
+  }
+
+  // Init
+  showPage(1);
+</script>
+
+</body>
+</html>
