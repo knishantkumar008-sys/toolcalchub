@@ -1,0 +1,1 @@
+Put your images in this folder for the website. When writing the HTML code, reference them like this: src="images/yourphoto.jpg"
